@@ -1,3 +1,17 @@
+# FCM notes
+
+### Update from upstream
+Switch ckeditor5custom branch to upstream
+
+clone git@github.com:ckeditor/ckeditor5.git
+Switch branch to stable
+copy ckeditor5/packages/ckeditor5-build-classic to ckeditor5custom
+commit
+Switch ckeditor5custom branch to main
+merge upstream to main
+
+
+
 CKEditor 5 classic editor build
 ========================================
 
