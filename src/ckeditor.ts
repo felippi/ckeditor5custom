@@ -27,6 +27,7 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
 import { FontFamily, Font } from '@ckeditor/ckeditor5-font';
+import { Markdown } from '@ckeditor/ckeditor5-markdown-gfm';
 
 import {fcmUploadAdapterPlugin} from './FcmUploadAdapter';
 
@@ -38,6 +39,7 @@ import {fcmUploadAdapterPlugin} from './FcmUploadAdapter';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
+		Markdown,
 		Essentials,
 		UploadAdapter,
 		Autoformat,
