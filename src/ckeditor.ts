@@ -38,44 +38,56 @@ import {fcmUploadAdapterPlugin} from './FcmUploadAdapter';
 // import EasyImagePlugin from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 // import TextTransformationPlugin from '@ckeditor/ckeditor5-text-transformation/src/text-transformation';
 
-export default class ClassicEditor extends ClassicEditorBase {
-	public static override builtinPlugins = [
-		SourceEditing,
-		Markdown,
-		Essentials,
-		UploadAdapter,
-		Autoformat,
-		Bold,
-		Italic,
-		BlockQuote,
-		CKBox,
-		CKFinder,
-		CloudServices,
-		EasyImage,
-		Heading,
-		Image,
-		ImageCaption,
-		ImageStyle,
-		ImageToolbar,
-		ImageUpload,
-		Indent,
-		Link,
-		List,
-		MediaEmbed,
-		Paragraph,
-		PasteFromOffice,
-		PictureEditing,
-		Table,
-		TableToolbar,
-		TextTransformation,
+const builtinPlugins = [
+	SourceEditing,
+	Markdown,
+	Essentials,
+	UploadAdapter,
+	Autoformat,
+	Bold,
+	Italic,
+	BlockQuote,
+	CKBox,
+	CKFinder,
+	CloudServices,
+	EasyImage,
+	Heading,
+	Image,
+	ImageCaption,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	Indent,
+	Link,
+	List,
+	MediaEmbed,
+	Paragraph,
+	PasteFromOffice,
+	PictureEditing,
+	Table,
+	TableToolbar,
+	TextTransformation,
 
-		ImageResize,
-		ImageInsert,
-		HtmlEmbed,
-		FontFamily,
-		Font,
-		fcmUploadAdapterPlugin
-	];
+	ImageResize,
+	ImageInsert,
+	HtmlEmbed,
+	FontFamily,
+	Font,
+	fcmUploadAdapterPlugin
+];
+
+const plugins:any = [];
+for(const pIndex in builtinPlugins) {
+	if(pIndex!=='Markdown') {
+		plugins.push(pIndex);
+	}
+}
+
+
+
+
+export default class ClassicEditor extends ClassicEditorBase {
+	public static override builtinPlugins = builtinPlugins;
 /* Original
 	public static override defaultConfig = {
 		toolbar: {
@@ -174,6 +186,7 @@ export default class ClassicEditor extends ClassicEditorBase {
         } */
 		},
 		language: 'pt-br',
-		removePlugins: ['Markdown'],
+	//	removePlugins: ['Markdown'],
+		plugins: plugins,
 	};
 }

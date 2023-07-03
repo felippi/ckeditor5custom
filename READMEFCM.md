@@ -53,3 +53,30 @@ export function newId() {
 
 ```
 
+
+
+Plugin extra:
+
+```js
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+function MyUploadAdapterPlugin( editor ) {
+    editor.plugins.get( 'FileRepository' ).createUploadAdapter = function( loader ) {
+        // Custom upload adapter.
+        // ...
+    };
+}
+
+// Load the custom upload adapter as a plugin of the editor.
+ClassicEditor
+    .create( document.querySelector( '#editor' ), {
+        extraPlugins: [ MyUploadAdapterPlugin ],
+        // More of the editor's configuration.
+        // ...
+    } )
+    .catch( error => {
+        console.log( error );
+    } );
+```
+
+

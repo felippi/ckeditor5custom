@@ -25,9 +25,10 @@ import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
 import { FontFamily, Font } from '@ckeditor/ckeditor5-font';
 import { Markdown } from '@ckeditor/ckeditor5-markdown-gfm';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { fcmUploadAdapterPlugin } from './FcmUploadAdapter';
 export default class ClassicEditor extends ClassicEditorBase {
-    static builtinPlugins: (typeof Markdown | typeof Essentials | typeof UploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CKFinder | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TextTransformation | typeof ImageResize | typeof ImageInsert | typeof HtmlEmbed | typeof FontFamily | typeof Font | typeof fcmUploadAdapterPlugin)[];
+    static builtinPlugins: (typeof SourceEditing | typeof Markdown | typeof Essentials | typeof UploadAdapter | typeof Autoformat | typeof Bold | typeof Italic | typeof BlockQuote | typeof CKBox | typeof CKFinder | typeof CloudServices | typeof EasyImage | typeof Heading | typeof Image | typeof ImageCaption | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof Link | typeof List | typeof MediaEmbed | typeof Paragraph | typeof PasteFromOffice | typeof PictureEditing | typeof Table | typeof TableToolbar | typeof TextTransformation | typeof ImageResize | typeof ImageInsert | typeof HtmlEmbed | typeof FontFamily | typeof Font | typeof fcmUploadAdapterPlugin)[];
     static defaultConfig: {
         toolbar: {
             items: string[];
@@ -55,5 +56,6 @@ export default class ClassicEditor extends ClassicEditorBase {
             showPreviews: boolean;
         };
         language: string;
+        plugins: any;
     };
 }
