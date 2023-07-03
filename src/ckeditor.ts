@@ -129,7 +129,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 
 			],
 			styles: {
-				options: [ 'alignLeft', 'alignCenter', 'alignRight', 'full', 'side' ]
+				options: [ 'alignLeft', 'alignCenter', 'alignRight', 'block', 'side' ]
 			},
 			resizeOptions: [
 				{
