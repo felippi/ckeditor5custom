@@ -77,9 +77,11 @@ const builtinPlugins = [
 ];
 
 const plugins:any = [];
-for(const pIndex in builtinPlugins) {
-	if(pIndex!=='Markdown') {
-		plugins.push(pIndex);
+for(const p of builtinPlugins) {
+	//@ts-ignore
+	const name = p.pluginName;
+	if(name!=='Markdown') {
+		plugins.push(p);
 	}
 }
 
