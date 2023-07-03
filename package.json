@@ -1,7 +1,7 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
-  "version": "38.1.0",
-  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
+  "name": "fcmckeditor5",
+  "version": "1.0.0",
+  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor. Fork of CKEditor 5",
   "keywords": [
     "ckeditor5-build",
     "ckeditor",
@@ -20,6 +20,11 @@
     "real-time",
     "framework"
   ],
+  "author": {
+    "name": "Felippi CM",
+    "email": "felippicm@gmail.com",
+    "url": ""
+  },
   "main": "./build/ckeditor.js",
   "types": "./build/ckeditor.d.ts",
   "files": [
@@ -73,14 +78,11 @@
     "node": ">=16.0.0",
     "npm": ">=5.7.1"
   },
-  "author": "CKSource (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/felippi/fcmckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
-    "directory": "packages/ckeditor5-build-classic"
+    "url": "https://github.com/felippi/fcmckeditor5.git"
   },
   "scripts": {
     "build": "webpack --mode production",
