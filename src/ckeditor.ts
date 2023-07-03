@@ -28,6 +28,7 @@ import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
 import { FontFamily, Font } from '@ckeditor/ckeditor5-font';
 import { Markdown } from '@ckeditor/ckeditor5-markdown-gfm';
+import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 import {fcmUploadAdapterPlugin} from './FcmUploadAdapter';
 
@@ -39,6 +40,7 @@ import {fcmUploadAdapterPlugin} from './FcmUploadAdapter';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
+		SourceEditing,
 		Markdown,
 		Essentials,
 		UploadAdapter,
@@ -111,6 +113,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 		toolbar: {
 			items: [
 				'undo', 'redo',
+				'|', 'sourceEditing',
 				'|', 'heading',
 				'|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
 				'|', 'outdent', 'indent',
@@ -171,5 +174,6 @@ export default class ClassicEditor extends ClassicEditorBase {
         } */
 		},
 		language: 'pt-br',
+		removePlugins: ['Markdown'],
 	};
 }
