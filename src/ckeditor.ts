@@ -168,6 +168,6 @@ export default class ClassicEditor extends ClassicEditorBase {
           };
         } */
 		},
-		language: 'pt',
+		language: 'pt-br',
 	};
 }
