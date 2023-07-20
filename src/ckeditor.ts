@@ -90,6 +90,7 @@ for(const p of builtinPlugins) {
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = builtinPlugins;
+	public static defaultPlugins = plugins;
 /* Original
 	public static override defaultConfig = {
 		toolbar: {

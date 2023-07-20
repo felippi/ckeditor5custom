@@ -8,6 +8,14 @@ const editorConfig = {
   fcmSetImageDb: (id, url, path) =>{setImageDb(id, url, path,'faqs', vm.valueId)}
 };
 
+const editorConfigMD = { // Makedown
+  plugins: [...ClassicEditor.defaultPlugins, 'Markdown'],
+  language: this.$i18n.locale==='en-US'?'en':'pt-br',
+  fcmUploaderFile: uploadFile,
+  fcmGetterNewId: newId,
+  fcmSetImageDb: (id, url, path) =>{setImageDb(id, url, path,'faqs', vm.valueId)}
+};
+
 
 function uploadFile (path, file, progressFn, setUploadTask) {
   return new Promise(function (resolve, reject) {
